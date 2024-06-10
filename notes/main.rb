@@ -96,3 +96,30 @@ end
   puts index
 end
 
+# reading files then putting the contents to the screen
+File.open("notes/names", "r") do |file|
+  puts file.read
+  file.close # close file as to not blow through your memory
+end
+
+# .readline will read out one line from the file at a time
+names = Array[]
+File.open("notes/names", "r") do |file|
+  file.each do |line|
+    names << line.chomp # Appends an item to an array
+  end
+  file.close
+end
+
+# .readlines returns each line in the file as an array
+File.open("notes/names", "r") do |file|
+  names = file.readlines
+  file.close
+end
+
+# error handling is done through begin rescue statements
+begin
+  num = 10/0
+rescue # if an error shows up in the begin block, run the rescue block
+  puts "yikes"
+end
