@@ -54,3 +54,45 @@ end
 # call a method by typing it's name, if it has parameters use parentheses
 name = get_name
 display_data(name, age)
+
+# if statements run the following code if the parameter results to true
+if name == "bob"
+  puts "You are definitely bob"
+elsif name == "john"
+  puts "You are definitely john"
+else
+  puts "I don't know you"
+end
+
+# case statements run the following code when the case equals the parameter
+case name
+when "bob"
+  puts "You are definitely bob"
+when "john"
+  puts "You are definitely john"
+else
+  puts "I don't know you"
+end
+
+# while loops run the following code until the specified condition results to false
+index = 0
+while index < 5
+  index += 1 # incrementing
+  print index
+end
+
+# for loops loop through each element in the specified iterable
+for value in array_values
+  puts value
+end
+
+# does the same thing as above example
+array_values.each do |value|
+  puts value
+end
+
+# for loop for a specic number of loops
+5.times do |index|
+  puts index
+end
+
