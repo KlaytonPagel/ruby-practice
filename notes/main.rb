@@ -123,3 +123,22 @@ begin
 rescue # if an error shows up in the begin block, run the rescue block
   puts "yikes"
 end
+
+# Create a class using the class keyword
+class CoolClass
+
+  # a method named initialize will automatically run when object is created
+  def initialize(name)
+    # variables with @ in front can be used anywhere in the class
+    @name = name
+  end
+
+  def show_name
+    puts @name
+  end
+
+end
+
+# create an object of the class then call it's methods using the object
+class_object = CoolClass.new(name)
+class_object.show_name
